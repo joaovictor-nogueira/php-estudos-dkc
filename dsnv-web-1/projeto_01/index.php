@@ -7,10 +7,10 @@
     <meta name="description" content="Descrição do Website">
     <title>Projeto 01</title>
     <link rel="stylesheet" href="estilo/style.css">
+    <link rel="shortcut icon" href="imagens/jota-vermelho.ico" type="image/x-icon">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,700;0,800;1,300;1,700;1,800&display=swap');
     </style>
-    <link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -134,6 +134,15 @@
     </footer>
 
 
-<script src="https://kit.fontawesome.com/d709ea726d.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d709ea726d.js" crossorigin="anonymous"></script>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function(){
+/* 
+            var mensagem = "olá mundo";
+            console.log(mensagem);
+            alert(mensagem); */
+        })   
+    </script>
 </body>
 </html>
