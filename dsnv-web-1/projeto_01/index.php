@@ -15,7 +15,7 @@
 <body>
     <header>
         <div class="center">
-            <div class="logo left">Logomarca</div> <!-- LOGO -->
+            <div class="logo left"><a href="/">Logomarca</a></div> <!-- LOGO -->
             <nav class="desktop right">
                 <ul>
                     <li><a href="">Home</a></li>
@@ -136,13 +136,6 @@
 
     <script src="https://kit.fontawesome.com/d709ea726d.js" crossorigin="anonymous"></script>
     <script src="js/jquery.js"></script>
-    <script>
-        $(function(){
-/* 
-            var mensagem = "olá mundo";
-            console.log(mensagem);
-            alert(mensagem); */
-        })   
-    </script>
+    <script src="js/scripts.js"></script>
 </body>
 </html>
