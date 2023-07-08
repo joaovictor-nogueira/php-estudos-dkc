@@ -15,6 +15,20 @@
     </style>
 </head>
 <body>
+
+    <?php 
+        $url = isset($_GET['url']) ? $_GET['url'] : 'home';
+        switch ($url) {
+            case 'sobre':
+                echo '<target target="sobre" />';
+                break;
+            
+            case 'servicos':
+                echo '<target target="serviços" />';
+                break;
+        }
+    ?>
+
     <header>
         <div class="center">
             <div class="logo left"><a href="/">Logomarca</a></div> <!-- LOGO -->
@@ -41,14 +55,16 @@
 
     <?php 
         
-        $url = isset($_GET['url']) ? $_GET['url'] : 'home';
-
         if(file_exists('pages/'.$url.'.php')){
             include('pages/'.$url.'.php');
         }else{
             /* podemos fazer o que quiser pois a pag n existe */
-            $pagina404 = true;
-            include('pages/404.php');
+            if($url != 'sobre' && $url != 'serviços'){
+                $pagina404 = true;
+                include('pages/404.php');
+            }else{
+                include('pages/home.php');
+            }
         }
 
     ?>    
@@ -63,5 +79,13 @@
     <script src="https://kit.fontawesome.com/d709ea726d.js" crossorigin="anonymous"></script>
     <script src="<?php echo INCLUDE_PATH; ?>js/jquery.js"></script>
     <script src="<?php echo INCLUDE_PATH; ?>js/scripts.js"></script>
+    <?php 
+    
+     if($url == 'contato'){
+
+    ?>
+    <script src='https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyDHPNQxozOzQSZ-djvWGOBUsHkBUoT_qH4&callback=Function.prototype'></script>
+    <script src="<?php echo INCLUDE_PATH; ?>js/map.js"></script>
+    <?php } ?>
 </body>
 </html>
