@@ -90,12 +90,22 @@ nav.desktop a:hover{
     text-decoration: underline;
 }
 
-section.banner-principal{
+section.banner-container{
     width: 100%;
     height: 600px;
-    background-image: url('../imagens/back-banner.jpg');
-    background-size: cover;
     position: relative;
+}
+
+.banner-single{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-size: cover;
+    background-position: center;
+
 }
 
 div.overlay{
@@ -104,30 +114,30 @@ div.overlay{
     top: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
-    background-color: rgba(51,51,51,0.8);
+    z-index: 2;
+    background-color: rgba(51,51,51,0.7);
     background-position: center center;
 }
 
-section.banner-principal form{
+section.banner-container form{
     width: 93%;
     max-width: 600px;
     position: absolute;
-    z-index: 2;
+    z-index: 3;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%,-50%);
 }
 
-section.banner-principal form h2{
+section.banner-container form h2{
     color: white;
     font-weight: lighter;
     font-size: 40px;
     text-align: center;
 }
 
-section.banner-principal form input[type=email]{
+section.banner-container form input[type=email]{
     width: 100%;
     height: 66px;
     background-color: white;
@@ -138,7 +148,7 @@ section.banner-principal form input[type=email]{
     border: 0;
 }
 
-section.banner-principal form input[type=submit]{
+section.banner-container form input[type=submit]{
     width: 100%;
     height: 66px;
     margin-top: 10px;
@@ -346,6 +356,28 @@ section.erro-404 a{
     cursor: pointer;
 
     border: 1px solid white;
+}
+
+.bullets{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+}
+
+.bullets span{
+    margin: 0 7px;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: white;
+}
+
+.bullets span.active-slider{
+    background-color: #00C59E;
 }
 
 @media screen and (max-width: 768px){
