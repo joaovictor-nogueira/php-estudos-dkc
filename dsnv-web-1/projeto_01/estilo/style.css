@@ -267,6 +267,11 @@ footer p{
     font-size: 16px;
 }
 
+/* Arrumar scroll no IE e EDGE */
+body{
+    overflow-x: hidden;
+}
+
 section.erro-404 h1{
     text-align: center;
     color: #444;

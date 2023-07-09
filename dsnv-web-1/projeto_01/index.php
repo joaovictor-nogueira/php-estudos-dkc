@@ -19,12 +19,11 @@
     <?php 
         $url = isset($_GET['url']) ? $_GET['url'] : 'home';
         switch ($url) {
-            case 'sobre':
-                echo '<target target="sobre" />';
+            case 'depoimentos':
+                echo '<target target="depoimentos" />';
                 break;
-            
             case 'servicos':
-                echo '<target target="serviços" />';
+                echo '<target target="servicos" />';
                 break;
         }
     ?>
@@ -35,8 +34,8 @@
             <nav class="desktop right">
                 <ul>
                     <li><a href="<?php echo INCLUDE_PATH; ?>">Home</a></li>
-                    <li><a href="<?php echo INCLUDE_PATH; ?>sobre">Sobre</a></li>
-                    <li><a href="<?php echo INCLUDE_PATH; ?>serviços">Serviços</a></li>
+                    <li><a href="<?php echo INCLUDE_PATH; ?>depoimentos">Depoimentos</a></li>
+                    <li><a href="<?php echo INCLUDE_PATH; ?>servicos">Serviços</a></li>
                     <li><a href="<?php echo INCLUDE_PATH; ?>contato">Contato</a></li>
                 </ul>
             </nav>
@@ -44,8 +43,8 @@
                 <div class="botao-menu-mobile"><i class="fa-solid fa-bars"></i></div>
                 <ul>
                     <li><a href="<?php echo INCLUDE_PATH; ?>">Home</a></li>
-                    <li><a href="<?php echo INCLUDE_PATH; ?>sobre">Sobre</a></li>
-                    <li><a href="<?php echo INCLUDE_PATH; ?>serviços">Serviços</a></li>
+                    <li><a href="<?php echo INCLUDE_PATH; ?>depoimentos">Depoimentos</a></li>
+                    <li><a href="<?php echo INCLUDE_PATH; ?>servicos">Serviços</a></li>
                     <li><a href="<?php echo INCLUDE_PATH; ?>contato">Contato</a></li>
                 </ul>
             </nav>
@@ -59,7 +58,7 @@
             include('pages/'.$url.'.php');
         }else{
             /* podemos fazer o que quiser pois a pag n existe */
-            if($url != 'sobre' && $url != 'serviços'){
+            if($url != 'depoimentos' && $url != 'servicos'){
                 $pagina404 = true;
                 include('pages/404.php');
             }else{
