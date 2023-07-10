@@ -90,4 +90,4 @@
             <div class="clear"></div>
         </div><!-- center -->
 
-    </section>
+    </section><!-- Extras -->

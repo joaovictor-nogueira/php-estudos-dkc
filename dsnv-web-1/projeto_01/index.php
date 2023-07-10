@@ -38,6 +38,7 @@
                     <li><a href="<?php echo INCLUDE_PATH; ?>depoimentos">Depoimentos</a></li>
                     <li><a href="<?php echo INCLUDE_PATH; ?>servicos">Serviços</a></li>
                     <li><a realtime="contato" href="<?php echo INCLUDE_PATH; ?>contato">Contato</a></li>
+                    <li><a realtime="outro-menu" href="<?php echo INCLUDE_PATH; ?>outro-menu">Outro Menu</a></li>
                 </ul>
             </nav>
             <nav class="mobile right">
@@ -46,7 +47,8 @@
                     <li><a href="<?php echo INCLUDE_PATH; ?>">Home</a></li>
                     <li><a href="<?php echo INCLUDE_PATH; ?>depoimentos">Depoimentos</a></li>
                     <li><a href="<?php echo INCLUDE_PATH; ?>servicos">Serviços</a></li>
-                    <li><a realtime href="<?php echo INCLUDE_PATH; ?>contato">Contato</a></li>
+                    <li><a realtime="contato" href="<?php echo INCLUDE_PATH; ?>contato">Contato</a></li>
+                    <li><a realtime="outro-menu" href="<?php echo INCLUDE_PATH; ?>outro-menu">Outro Menu</a></li>
                 </ul>
             </nav>
         <div class="clear"></div><!-- clear -->
@@ -77,19 +79,19 @@
         <p>Todos os direitos reservados </p>
         </div><!-- center -->
     </footer>
-
-    <script src="<?php echo INCLUDE_PATH; ?>js/map.js"></script>
-    <script src='https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyDHPNQxozOzQSZ-djvWGOBUsHkBUoT_qH4&callback=Function.prototype'></script>
-    
+ 
     
     <script src="https://kit.fontawesome.com/d709ea726d.js" crossorigin="anonymous"></script>
 
+
+    
     <script src="<?php echo INCLUDE_PATH; ?>js/jquery.js"></script>
+    <script src="<?php echo INCLUDE_PATH; ?>js/constants.js"></script>
+    <script src='https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyDHPNQxozOzQSZ-djvWGOBUsHkBUoT_qH4&callback=Function.prototype'></script>
+    <script src="<?php echo INCLUDE_PATH; ?>js/map.js"></script>
     <script src="<?php echo INCLUDE_PATH; ?>js/scripts.js"></script>
     <?php 
-    
         if($url == 'home' || $url == ''){
-
     ?>
     <script src="<?php echo INCLUDE_PATH; ?>js/slider.js"></script>
     <?php } ?>
@@ -98,7 +100,9 @@
         if($url == 'contato'){
 
     ?>
-    
     <?php } ?>
+    <script src="<?php echo INCLUDE_PATH; ?>js/exemplo.js"></script>
+
+    
 </body>
 </html>
