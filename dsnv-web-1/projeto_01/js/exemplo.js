@@ -1,7 +1,7 @@
 $(function(){
 
     var atual = -1;
-    var maximo = $('.box-especialidade').lenght; - 1;
+    var maximo = $('.box-especialidade').length - 1;
     var timer;
     var animacaoDelay = 3;
 
@@ -13,9 +13,14 @@ $(function(){
         function logicaAnimacao(){
             atual++;
             if(atual > maximo){
+
                 clearInterval(timer);
                 return false;
+                
             }
+
+           // alert('chamando intervalo');
+
             $('.box-especialidade').eq(atual).fadeIn();
         }
     }
