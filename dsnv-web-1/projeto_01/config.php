@@ -1,10 +1,14 @@
 <?php 
 
     $autoload = function($class){
+        if($class == 'Email'){
+            include('vendor/autoload.php');
+        }
         include('classes/' . $class . '.php');
     }; 
 
     spl_autoload_register($autoload);
+
 
 
 
