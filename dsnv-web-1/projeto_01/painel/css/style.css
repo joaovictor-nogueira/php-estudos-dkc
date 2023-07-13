@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;;
+}
+
+html,body{
+    height: 100%;
+    background-color: rgb(145, 145, 145);
+}
+
+.box-login{
+    max-width: 600px;
+    width: 95%;
+    padding: 60px 2%;
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    border-radius: 8px;
+    box-shadow: 1px 1px 6px black;
+}
+
+.box-login h1{
+    text-align: center;
+    font-size: 19px;
+    color: black;
+    margin: 10px 0;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.box-login input[type=text],
+.box-login input[type=password]{
+    width: 100%;
+    height: 40px;
+    background-color: #f9fbe7 ;
+    border: 1px solid #ccc;
+    padding-left: 8px;
+    margin-top: 8px;
+
+}
+
+.box-login input[type=submit]{
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+    margin-top: 10px;
+    background-color: #4db6ac ;
+    color: white;
+    font-size: 14px;
+    border: 0;
+
+}
+
+/* box erro do painel */
+
+.erro-box{
+    width: 100%;
+    padding: 8px 2%;
+    text-align: center;
+    background-color: #f78253;
+    color: white;
+    font-size: 15px;
+}

@@ -4,7 +4,25 @@
     <div style="background-image: url('<?php echo INCLUDE_PATH; ?>imagens/background3.jpg');" class="banner-single"></div><!-- banner single -->
     <div class="overlay"></div><!-- overlay -->
         <div class="center">
-        <form action="" method="post">
+       <!--  <?php 
+         /* if(isset($_POST['acao'])){
+                                                # Enviei o form 
+            if($email != ''){
+                $email = $_POST['email'];
+                if(filter_var($email, FILTER_VALIDATE_EMAIL)){ */
+                    /* TUDO CERTO É um email
+                    pode enviar */
+                   # $email = new Email;
+               /*  }else{
+                    echo '<script>alert("Não é um email valido!")</script>';
+                }
+            }else{
+                echo '<script>alert("Campos vazios não sao permitidos")</script>';
+            }
+            
+         } */
+        ?> -->
+        <form method="post">
             <h2>Qual o seu melhor e-mail?</h2>
             <input type="email" name="email" id="iemail" required>
             <input type="submit" value="Cadastrar!" name="acao">
