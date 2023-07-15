@@ -1,3 +1,4 @@
+/* 
 $(function(){
 
     var atual = -1;
@@ -26,3 +27,4 @@ $(function(){
     }
 
 })
+ */

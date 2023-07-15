@@ -1,6 +1,7 @@
 <?php 
 
     session_start();
+    date_default_timezone_set('America/Sao_Paulo');
 
     $autoload = function($class){
         if($class == 'Email'){
@@ -22,6 +23,9 @@
     define('USER','root');
     define('PASSWORD','');
     define('DATABASE','projeto_01');
+
+    /* constantes PARA O PAINEL DE CONTROLE */
+    define('NOME_EMPRESA',"Site do Pout");
 
     /* FUNÇOES */
 

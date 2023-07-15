@@ -1,4 +1,5 @@
 <?php include('config.php'); ?>
+<?php Site::updateUsuarioOnline(); ?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -83,10 +84,13 @@
     
     <script src="https://kit.fontawesome.com/d709ea726d.js" crossorigin="anonymous"></script>
 
-
+    
     
     <script src="<?php echo INCLUDE_PATH; ?>js/jquery.js"></script>
     <script src="<?php echo INCLUDE_PATH; ?>js/scripts.js"></script>
+
+    <script src="<?php echo INCLUDE_PATH; ?>js/slider.js"></script>
+
     <script src="<?php echo INCLUDE_PATH; ?>js/constants.js"></script>
     <script src='https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyDHPNQxozOzQSZ-djvWGOBUsHkBUoT_qH4&callback=Function.prototype'></script>
     <script src="<?php echo INCLUDE_PATH; ?>js/map.js"></script>
@@ -103,9 +107,8 @@
     ?>
     <?php } ?>
     
-    <script src="<?php echo INCLUDE_PATH; ?>js/slider.js"></script>
+     
     <script src="<?php echo INCLUDE_PATH; ?>js/exemplo.js"></script>
 
-    
 </body>
 </html>

@@ -1,7 +1,7 @@
 <section class="banner-container">
-    <div style="background-image: url('<?php echo INCLUDE_PATH; ?>imagens/back-banner.jpg');" class="banner-single"></div><!-- banner single -->
-    <div style="background-image: url('<?php echo INCLUDE_PATH; ?>imagens/background2.jpg');" class="banner-single"></div><!-- banner single -->
-    <div style="background-image: url('<?php echo INCLUDE_PATH; ?>imagens/background3.jpg');" class="banner-single"></div><!-- banner single -->
+    <div class="banner-single" style="background-image: url('<?php echo INCLUDE_PATH; ?>imagens/back-banner.jpg');" ></div><!-- banner single -->
+    <div class="banner-single" style="background-image: url('<?php echo INCLUDE_PATH; ?>imagens/background2.jpg');" ></div><!-- banner single -->
+    <div class="banner-single" style="background-image: url('<?php echo INCLUDE_PATH; ?>imagens/background3.jpg');" ></div><!-- banner single -->
     <div class="overlay"></div><!-- overlay -->
         <div class="center">
        <!--  <?php 
