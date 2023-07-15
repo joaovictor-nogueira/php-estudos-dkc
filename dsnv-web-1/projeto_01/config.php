@@ -17,6 +17,8 @@
 
     define('INCLUDE_PATH','http://localhost/php-estudos-dkc/dsnv-web-1/projeto_01/');
     define('INCLUDE_PATH_PAINEL',INCLUDE_PATH.'painel/');
+    
+    define('BASE_DIR_PAINEL',__DIR__.'/painel');
 
     //Conectar com banco de dados!
     define('HOST','localhost');

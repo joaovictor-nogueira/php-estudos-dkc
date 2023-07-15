@@ -114,23 +114,10 @@ body{
 }
 
 .menu-wraper{
-    width: 300px;
+    width: 250px;
 }
 
-header{
-    position: relative;
-    left: 300px;
-    padding: 10px 0;
-    background-color: #039be5 ;
-    width: calc(100% - 300px);
-}
 
-.content{
-    width: calc(100% - 250px);
-    position: relative;
-    left: 250px;
-    padding: 2%;
-}
 
 div.menu{
     overflow-x: hidden;
@@ -142,7 +129,22 @@ div.menu{
     top: 0;
     background-color: #607d8b;
     float: left;
-    width: 300px;
+    width: 250px;
+}
+
+.content{
+    width: calc(100% - 250px);
+    position: relative;
+    left: 250px;
+    padding: 2%;
+}
+
+header{
+    position: relative;
+    left: 250px;
+    padding: 10px 0;
+    background-color: #039be5 ;
+    width: calc(100% - 250px);
 }
 
 .items-menu{
@@ -241,18 +243,12 @@ div.nome-usuario p{
     float: right;
 }
 
-.content{
-    width: calc(100% - 300px);
-    position: relative;
-    left: 300px;
-    padding: 10px;
-}
+
 
 .box-content{
     background-color: white;
     padding: 30px;
     margin-bottom: 25px;
-    margin-top: 25px;
 }
 
 .box-content h2{
@@ -300,24 +296,92 @@ div.nome-usuario p{
 
 /* Tabela Responsiva */
 .table-responsive{
-    max-width: 1000px;
     margin: 20px auto;
+    max-width: 1200px;
 }
 
 .table-responsive .row:nth-of-type(1){
     font-weight: bold;
-    border-bottom: 1px solid #ccc;
+    background-color: #65e4d7;
+    color: rgb(53, 53, 53);
 }
 
 .table-responsive .row{
     color: #777;
     padding: 8px 0;
+    border-bottom: 1px solid #ccc;
 }
 
 
 .col{
     float: left;
     width: 50%;
+}
+
+.box-content form{
+    margin: 30px 0;
+}
+
+.box-content form label{
+    font-size: 17px;
+    font-weight: 300;
+    color: black;
+    display: block;
+}
+
+.box-content .form-group{
+    margin: 15px 0;
+}
+
+.box-content form input[type=text],
+.box-content form input[type=password]{
+    margin-top: 8px;
+    font-size: 16px;
+    font-weight: normal;
+    color: black;
+    width: 100%;
+    height: 40px;
+    padding-left: 8px;
+    border: 1px solid #ccc;
+}
+
+.box-content form input[type=file]{
+    margin-top: 8px;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+
+/* BOX DE ALERTA */
+
+.box-alert{
+    width: 100%;
+    padding: 8px 0;
+    text-align: center;
+    font-weight: 600;
+}
+
+.sucesso{
+    background-color: #64dd17 ;
+    color: white;
+    
+}
+
+.erro{
+    background-color: #f76653;
+    color: white;
+}
+
+.box-content form input[type=submit]{
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+    margin-top: 10px;
+    background-color: #4db6ac ;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    border: 0;
 }
 
 @media screen and (max-width: 1200px) {
