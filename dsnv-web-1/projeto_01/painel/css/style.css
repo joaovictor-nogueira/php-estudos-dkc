@@ -384,6 +384,15 @@ div.nome-usuario p{
     border: 0;
 }
 
+.menu-active{
+    background-color: #90b6c5;
+}
+
+.menu-active::before{
+    content: '> ';
+    font-weight: 600;
+}
+
 @media screen and (max-width: 1200px) {
 
     .box-metrica-single{
