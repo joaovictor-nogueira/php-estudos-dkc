@@ -59,7 +59,7 @@
             </div><!-- menu-btn -->
             
             <div class="loggout">
-                <a href="<?php echo INCLUDE_PATH_PAINEL ?>"><i class="fa-solid fa-house"></i><span> Pagina Inicial </span></a>
+                <a <?php if(@$_GET['url'] == ''){ ?> style="background: #2196f3;padding:11px" <?php } ?> href="<?php echo INCLUDE_PATH_PAINEL ?>"><i class="fa-solid fa-house"></i><span> Pagina Inicial </span></a>
                 <div style="padding: 0 20px;display: inline;"></div>
                 <a href="<?php echo INCLUDE_PATH_PAINEL ?>?loggout"><i class="fa-solid fa-right-from-bracket"></i><span> Sair</span></a>
             </div><!-- loggout -->

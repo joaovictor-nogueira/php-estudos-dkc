@@ -31,13 +31,9 @@
 
     /* FUNÇOES do PAINEL */
 
-    function pegaCargo($cargo){
-        $arr = [
-            '0' => 'Normal',
-            '1' => 'Sub Administrador',
-            '2' => 'Administrador'];
+    function pegaCargo($indice){
            
-            return $arr[$cargo];
+            return Painel::$cargos[$indice];
     }
 
     function selecionadoMenu($par){

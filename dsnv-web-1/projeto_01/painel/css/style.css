@@ -297,7 +297,6 @@ div.nome-usuario p{
 /* Tabela Responsiva */
 .table-responsive{
     margin: 20px auto;
-    max-width: 1200px;
 }
 
 .table-responsive .row:nth-of-type(1){
@@ -335,6 +334,17 @@ div.nome-usuario p{
 
 .box-content form input[type=text],
 .box-content form input[type=password]{
+    margin-top: 8px;
+    font-size: 16px;
+    font-weight: normal;
+    color: black;
+    width: 100%;
+    height: 40px;
+    padding-left: 8px;
+    border: 1px solid #ccc;
+}
+
+.box-content form select{
     margin-top: 8px;
     font-size: 16px;
     font-weight: normal;
@@ -387,11 +397,15 @@ div.nome-usuario p{
 .menu-active{
     background-color: #90b6c5;
 }
-
+/* 
 .menu-active::before{
     content: '> ';
-    font-weight: 600;
-}
+    font-weight: 600; 
+    
+    ADICIONAR SETA PRA QUANDO ESTIVER SELECIONADO
+    
+    
+} */
 
 @media screen and (max-width: 1200px) {
 
@@ -426,12 +440,18 @@ div.nome-usuario p{
 }
 
 @media screen and (max-width: 600px){
+    .w50{
+        width: 100%;
+    }
     .box-metrica-single{
         height: 50%;
     }
 }
 
 @media screen and (max-width: 500px){
+    .w50{
+        width: 100%;
+    }
     .box-metrica-single{
         height: 50%;
     }
