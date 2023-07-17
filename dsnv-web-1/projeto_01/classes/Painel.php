@@ -12,6 +12,7 @@
         }
 
         public static function loggout(){
+            setcookie('lembrar','true',time() - 1, '/');
             session_destroy();
             header('Location: '.INCLUDE_PATH_PAINEL);
         }
@@ -76,6 +77,55 @@
 
         public static function deleteFile($file){
             @unlink('uploads/'.$file);
+        }
+
+        public static function insert($arr){
+            $certo = true;
+            $nome_tabela = $arr['nome_tabela'];
+            $query = "INSERT INTO `$nome_tabela` VALUES (null";
+            foreach ($arr as $key => $value) {
+                $nome = $key;
+                $valor = $value;
+                if($nome == 'acao' || $nome == 'nome_tabela')
+                    continue;
+                if($value == ''){
+                    $certo = false;
+                    break;
+                }
+                $query.=",?";
+                $parametros[] = $value;
+            }
+
+            $query.=")";
+            if($certo == true){
+                $sql = MySql::conectar()->prepare($query);
+                $sql->execute($parametros);
+            }
+            return $certo;
+        }
+
+        public static function selectAll($tabela,$start = null,$end = null){
+            if($start == null && $end == null)
+                $sql = MySql::conectar()->prepare("SELECT * FROM `$tabela`");
+            else
+                $sql = MySql::conectar()->prepare("SELECT * FROM `$tabela` LIMIT $start,$end");
+            
+            $sql->execute();
+            return $sql->fetchAll();
+        }
+
+        public static function deletar($tabela,$id=false){
+            if($id == false){
+                $sql = MySql::conectar()->prepare("DELETE FROM `$tabela`");
+            }else{
+                $sql = MySql::conectar()->prepare("DELETE FROM `$tabela` WHERE id = $id");
+            }
+            $sql->execute();
+        }
+
+        public static function redirect($url){
+            echo '<script>location.href="'.$url.'"</script>';
+            die();
         }
     }
 

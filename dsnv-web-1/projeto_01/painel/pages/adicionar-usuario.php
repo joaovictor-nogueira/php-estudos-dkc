@@ -77,7 +77,7 @@
     </div><!-- form-group -->
 
     <div class="form-group">
-        <input type="submit" name="acao" value="Atualizar!">
+        <input type="submit" name="acao" value="Adicionar!">
     </div><!-- form-group -->
 
 
