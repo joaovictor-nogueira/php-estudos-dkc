@@ -6,7 +6,7 @@
     }
 
     $paginaAtual = isset($_GET['pagina']) ? (int)$_GET['pagina'] : 1;
-    $porPagina = 2;
+    $porPagina = 3;
 
     $depoimentos = Painel::selectAll('tb_site.depoimentos',($paginaAtual - 1) * $porPagina,$porPagina);
 
@@ -30,7 +30,7 @@
             <tr>
                 <td><?php echo $value['nome']?></td>
                 <td><?php echo $value['data']?></td>
-                <td><a class="btn edit" href=""><i class="fa-solid fa-pencil"></i> Editar</a></td>
+                <td><a class="btn edit" href="<?php echo INCLUDE_PATH_PAINEL ?>editar-depoimento?id=<?php echo $value['id']; ?>"><i class="fa-solid fa-pencil"></i> Editar</a></td>
                 <td><a actionBtn="delete" class="btn delete" href="<?php echo INCLUDE_PATH_PAINEL ?>listar-depoimentos?excluir=<?php echo $value['id']; ?>"><i class="fa-solid fa-xmark"></i> Excluir</a></td>
             </tr>
 

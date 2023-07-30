@@ -84,15 +84,7 @@
                 <h2 class="tittle">Depoimentos dos nossos clientes</h2>
                 <div class="depoimentos-single">
                     <p class="depoimento-descrição">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia hic fugiat ratione beatae? Non aliquid ut dolorem eligendi voluptatum pariatur, tenetur placeat nisi fugit nostrum explicabo optio quos! Ipsam, vel."</p>
-                    <p class="nome-autor">Lorem Ipsum</p>
-                </div><!-- depoimento-single -->
-                <div class="depoimentos-single">
-                    <p class="depoimento-descrição">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia hic fugiat ratione beatae? Non aliquid ut dolorem eligendi voluptatum pariatur, tenetur placeat nisi fugit nostrum explicabo optio quos! Ipsam, vel."</p>
-                    <p class="nome-autor">Lorem Ipsum</p>
-                </div><!-- depoimento-single -->
-                <div class="depoimentos-single">
-                    <p class="depoimento-descrição">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia hic fugiat ratione beatae? Non aliquid ut dolorem eligendi voluptatum pariatur, tenetur placeat nisi fugit nostrum explicabo optio quos! Ipsam, vel."</p>
-                    <p class="nome-autor">Lorem Ipsum</p>
+                    <p class="nome-autor">Lorem Ipsum - 19/09/2019</p>
                 </div><!-- depoimento-single -->
             </div><!-- w50 -->
             <div id="servicos" class="w50 left servicos-container">
