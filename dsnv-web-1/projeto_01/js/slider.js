@@ -13,7 +13,7 @@ $(function(){
         $('.banner-single').eq(0).css('opacity','1');
         for(var i=0;i < maxSlide+1; i++){
             var content = $('.bullets').html();
-            if(i==0)
+            if(i == 0)
                 content+='<span class="active-slider"></span>';
             else
                 content+='<span></span>';

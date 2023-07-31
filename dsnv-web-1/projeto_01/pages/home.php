@@ -82,18 +82,34 @@
         <div class="center">
             <div id="depoimentos" class="w50 left depoimentos-container">
                 <h2 class="tittle">Depoimentos dos nossos clientes</h2>
+                <?php 
+                    $sql = MySql::conectar()->prepare("SELECT * FROM `tb_site.depoimentos` ORDER BY order_id ASC LIMIT 3");
+                    $sql->execute();
+                    $depoimentos = $sql->fetchAll();
+                    foreach ($depoimentos as $key => $value) {
+                    
+                ?>
                 <div class="depoimentos-single">
-                    <p class="depoimento-descrição">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia hic fugiat ratione beatae? Non aliquid ut dolorem eligendi voluptatum pariatur, tenetur placeat nisi fugit nostrum explicabo optio quos! Ipsam, vel."</p>
-                    <p class="nome-autor">Lorem Ipsum - 19/09/2019</p>
+                    <p class="depoimento-descrição">"<?php echo $value['depoimento']; ?>"</p>
+                    <p class="nome-autor"><?php echo $value['nome']; ?> - <?php echo $value['data']; ?></p>
                 </div><!-- depoimento-single -->
+                <?php 
+                    }
+                ?>
             </div><!-- w50 -->
             <div id="servicos" class="w50 left servicos-container">
                 <h2 class="tittle">Serviços</h2>
                 <div class="servicos">
                     <ul>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum obcaecati tempora ut quas! Omnis, earum. Ex aliquam id, magni facilis fuga doloribus accusantium reiciendis adipisci debitis, ratione molestias minima molestiae.</li>
-                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit minima similique, expedita ducimus aliquam sequi asperiores odio quod dolorum mollitia sint facilis magnam cupiditate nisi, numquam eveniet nulla quaerat vero.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum explicabo saepe, eligendi eius necessitatibus aut tempore laboriosam voluptatem quos odio nisi quaerat aliquid quisquam vitae error quasi nobis? Possimus, quia?</li>
+                        <?php 
+                            $sql = MySql::conectar()->prepare("SELECT * FROM `tb_site.servicos` ORDER BY order_id ASC LIMIT 3");
+                            $sql->execute();
+                            $servicos = $sql->fetchAll();
+                            foreach ($servicos as $key => $value) {
+                        ?>
+                        <li><?php echo $value['servico']; ?></li>
+                        
+                        <?php } ?>
                     </ul>
                 </div><!-- Servicos -->
             </div><!-- w50 -->

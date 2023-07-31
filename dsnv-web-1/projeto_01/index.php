@@ -61,16 +61,22 @@
     <?php 
         
         if(file_exists('pages/'.$url.'.php')){
-            include('pages/'.$url.'.php');
-        }else{
-            /* podemos fazer o que quiser pois a pag n existe */
-            if($url != 'depoimentos' && $url != 'servicos'){
-                $pagina404 = true;
-                include('pages/404.php');
-            }else{
-                include('pages/home.php');
-            }
-        }
+			include('pages/'.$url.'.php');
+		}else{
+			//Podemos fazer o que quiser, pois a página não existe.
+			if($url != 'depoimentos' && $url != 'servicos'){
+				$urlPar = explode('/',$url)[0];
+				if($urlPar != 'noticias'){
+				$pagina404 = true;
+				include('pages/404.php');
+				}else{
+					include('pages/noticias.php');
+				}
+			}else{
+				include('pages/home.php');
+			}
+		}
+
 
     ?>    
 
@@ -83,34 +89,37 @@
     </footer>
  
     
-    <script src="https://kit.fontawesome.com/d709ea726d.js" crossorigin="anonymous"></script>
-
-    
-    
     <script src="<?php echo INCLUDE_PATH; ?>js/jquery.js"></script>
-    <script src="<?php echo INCLUDE_PATH; ?>js/slider.js"></script>
-    <script src="<?php echo INCLUDE_PATH; ?>js/scripts.js"></script>
-
-    
-
     <script src="<?php echo INCLUDE_PATH; ?>js/constants.js"></script>
     <script src='https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyDHPNQxozOzQSZ-djvWGOBUsHkBUoT_qH4&callback=Function.prototype'></script>
+    <script src="<?php echo INCLUDE_PATH; ?>js/scripts.js"></script>
+
+    <script src="<?php echo INCLUDE_PATH; ?>js/slider.js"></script>
     <script src="<?php echo INCLUDE_PATH; ?>js/map.js"></script>
     
-    <?php 
-        if($url == 'home' || $url == ''){
-    ?>
-    
-    <?php } ?>
-    <?php 
-    
-        if($url == 'contato'){
+    <?php
 
+        if(is_array($url) && strstr($url[0],'noticias') !== false){
+    ?>
+        <script>
+            $(function(){
+                $('select').change(function(){
+                    location.href=include_path+"noticias/"+$(this).val();
+                })
+            })
+        </script>
+    <?php
+        }
+    ?>
+
+    <?php
+        if($url == 'contato'){
     ?>
     <?php } ?>
-    
      
-    <script src="<?php echo INCLUDE_PATH; ?>js/exemplo.js"></script>
+    <!-- <script src="<?php echo INCLUDE_PATH; ?> js/exemplo.js"></script> -->
+
+    <script src="https://kit.fontawesome.com/d709ea726d.js" crossorigin="anonymous"></script>
 
 </body>
 </html>
