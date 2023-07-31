@@ -1,6 +1,11 @@
 <?php 
     if(isset($_GET['excluir'])){
         $idExcluir = intval($_GET['excluir']);
+        $selectImagem = MySql::conectar()->prepare("SELECT slide FROM `tb_site.slides` WHERE id = ?");
+        $selectImagem->execute(array($_GET['excluir']));
+
+        $imagem = $selectImagem->fetch()['slide'];
+        Painel::deleteFile($imagem);
         Painel::deletar('tb_site.slides',$idExcluir);
         Painel::redirect(INCLUDE_PATH_PAINEL.'listar-slides');
     }else if(isset($_GET['order']) && isset($_GET['id'])){
