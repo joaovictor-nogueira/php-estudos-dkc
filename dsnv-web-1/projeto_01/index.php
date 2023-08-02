@@ -2,6 +2,12 @@
 <?php Site::updateUsuarioOnline(); ?>
 <?php Site::contador(); ?>
 
+<?php 
+    $infoSite = MySql::conectar()->prepare("SELECT * FROM `tb_site.config`");
+    $infoSite->execute();
+    $infoSite = $infoSite->fetch();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -9,7 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="palavras-chave,do,meu,site">
     <meta name="description" content="Descrição do Website">
-    <title>Projeto 01</title>
+    <title><?php echo $infoSite['titulo']; ?></title>
     <link href="<?php echo INCLUDE_PATH; ?>estilo/style.css" rel="stylesheet">
     <link rel="shortcut icon" href="imagens/jota-vermelho.ico" type="image/x-icon">
     <style>

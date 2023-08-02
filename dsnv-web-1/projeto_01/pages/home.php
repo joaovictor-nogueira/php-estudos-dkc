@@ -1,3 +1,4 @@
+
 <section class="banner-container">
     <div class="banner-single" style="background-image: url('<?php echo INCLUDE_PATH; ?>imagens/back-banner.jpg');" ></div><!-- banner single -->
     <div class="banner-single" style="background-image: url('<?php echo INCLUDE_PATH; ?>imagens/background2.jpg');" ></div><!-- banner single -->
@@ -36,11 +37,8 @@
 
         <div class="center">
         <div class="w50 left">
-            <h2>João victor N. D.</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, dignissimos dolor! Dignissimos iusto vel eius ad dolorum dolor tempora dolorem. Asperiores sit omnis quidem quasi sequi obcaecati blanditiis inventore modi.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, saepe. At recusandae unde sunt odio molestiae odit? Nam dolor dignissimos neque, reprehenderit laboriosam
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis architecto aperiam magnam ducimus repudiandae aspernatur saepe fugiat corrupti beatae sapiente doloribus labore, vero, unde quas ullam dicta consectetur, voluptatibus libero.
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit nostrum delectus dolorem accusamus architecto, doloremque consectetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis illo ducimus enim, minima ab non in laboriosam at dolorem ut optio, provident voluptatibus totam rerum nobis. Iure, maiores laborum. Reprehenderit.</p>
+            <h2><?php echo $infoSite['nome_autor']; ?></h2>
+            <p><?php echo $infoSite['descricao']; ?></p>
             
             
         </div> <!-- W50 -->  
@@ -58,19 +56,19 @@
         <div class="center">
             <h2 class="title">Minhas Especialidades</h2>
             <div class="w33 left box-especialidade">
-                <h3><i class="fa-brands fa-css3-alt"></i></h3>
+                <h3><i class="<?php echo $infoSite['icone1']; ?>"></i></h3>
                 <h4>CSS3</h4>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem assumenda id delectus sunt commodi rerum harum aliquam libero cum magni in, omnis sequi ipsa at, blanditiis, ipsum porro alias architecto?</p>
+                <p><?php echo $infoSite['descricao1']; ?></p>
             </div><!-- box-especialidades -->
             <div class="w33 left box-especialidade">
-                <h3><i class="fa-brands fa-html5"></i></h3>
+                <h3><i class="<?php echo $infoSite['icone2']; ?>"></i></h3>
                 <h4>HTML5</h4>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit voluptates, minima laudantium beatae unde dolorum. In hic explicabo harum illo non tempora ducimus eum quibusdam fugit, rem facilis dolore veritatis!</p>
+                <p><?php echo $infoSite['descricao2']; ?></p>
             </div><!-- box-especialidades -->
             <div class="w33 left box-especialidade">
-                <h3><i class="fa-brands fa-js"></i></h3>
+                <h3><i class="<?php echo $infoSite['icone3']; ?>"></i></h3>
                 <h4>Javascript</h4>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti consequuntur atque, hic quod earum minima eius laudantium ab quo culpa inventore fugit quibusdam. Sequi a reiciendis itaque ullam eaque nulla!</p>
+                <p><?php echo $infoSite['descricao3']; ?></p>
             </div><!-- box-especialidades -->
             <div class="clear"></div>
         </div> <!-- center -->
